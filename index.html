@@ -93,4 +93,169 @@
         }
         .services {
             display: grid;
-            grid-template-columns
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .service-card {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 30px 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #bae6fd;
+            transition: 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: #0ea5e9;
+            box-shadow: 0 10px 30px rgba(14,165,233,0.2);
+        }
+        .service-card .icon { font-size: 3.2rem; margin-bottom: 15px; }
+        .service-card h4 { color: #1e40af; margin-bottom: 10px; font-size: 1.3rem; }
+        .btn {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 10px;
+            transition: 0.3s;
+            box-shadow: 0 8px 25px rgba(37,211,102,0.5);
+        }
+        .btn:hover { 
+            transform: scale(1.08); 
+            box-shadow: 0 12px 35px rgba(37,211,102,0.7);
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            text-align: center;
+        }
+        .info-box { 
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 12px;
+        }
+        .info-box strong { 
+            color: #2563eb; 
+            display: block; 
+            font-size: 1.2rem; 
+            margin-bottom: 8px;
+        }
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .badge {
+            background: #eff6ff;
+            padding: 15px 25px;
+            border-radius: 12px;
+            font-weight: bold;
+            color: #1e40af;
+        }
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 35px 20px;
+            margin-top: 50px;
+        }
+        footer strong { color: white; }
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            .section { padding: 25px 20px; }
+            .doctor-icon { width: 80px; height: 80px; font-size: 4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo-area">
+            <div class="spider">🕷️</div>
+            <div class="doctor-icon">👨‍⚕️</div>
+            <h1>عيادة الشفاء الطبية</h1>
+            <h2>رعاية طبية متكاملة بأحدث التقنيات</h2>
+            <div class="status">● متاح للحجز الآن</div>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <div class="section">
+            <h3>خدماتنا الطبية</h3>
+            <div class="services">
+                <div class="service-card">
+                    <div class="icon">🩺</div>
+                    <h4>كشف وتشخيص</h4>
+                    <p>فحص شامل بأحدث الأجهزة الطبية وتشخيص دقيق للحالة</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">💊</div>
+                    <h4>خطط علاجية</h4>
+                    <p>متابعة دورية ووصف العلاج المناسب لكل حالة</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🧪</div>
+                    <h4>تحاليل طبية</h4>
+                    <p>شراكة مع أفضل المعامل لنتائج دقيقة وسريعة</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">📱</div>
+                    <h4>استشارات عن بعد</h4>
+                    <p>تواصل مع الطبيب مباشرة عبر واتساب من أي مكان</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>احجز موعدك في ثواني</h3>
+            <div style="text-align: center;">
+                <p style="margin-bottom: 25px; font-size: 1.15rem; color: #475569;">اضغط الزر وارسل اسمك على واتساب وسنرد عليك فوراً لتأكيد الموعد</p>
+                <a href="https://wa.me/201234567890?text=مرحبا، أريد حجز موعد" class="btn">📱 احجز الآن على واتساب</a>
+                <div class="trust-badges">
+                    <div class="badge">⚡ رد خلال 5 دقائق</div>
+                    <div class="badge">🔒 خصوصية تامة</div>
+                    <div class="badge">✅ مواعيد مؤكدة</div>
+                </div>
+                <p style="margin-top: 20px; color: #64748b; font-size: 0.9rem;">* استبدل 201234567890 برقم الواتساب الخاص بالعيادة</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>مواعيد العمل والتواصل</h3>
+            <div class="info-grid">
+                <div class="info-box">
+                    <strong>أيام العمل</strong>
+                    <p>من السبت إلى الخميس</p>
+                </div>
+                <div class="info-box">
+                    <strong>ساعات العمل</strong>
+                    <p>4:00 عصراً - 10:00 مساءً</p>
+                </div>
+                <div class="info-box">
+                    <strong>العنوان</strong>
+                    <p>القاهرة - مصر</p>
+                </div>
+                <div class="info-box">
+                    <strong>طوارئ واتساب</strong>
+                    <p>متاح 24/7</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p><strong>عيادة الشفاء الطبية</strong></p>
+        <p style="margin-top: 10px;">© 2026 جميع الحقوق محفوظة | تصميم احترافي 🕷️</p>
+    </footer>
+
+</body>
+</html>
